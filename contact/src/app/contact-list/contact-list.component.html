@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div class="row" *ngIf="!_contser.isClicked">
+    <p>List Of Contacts</p>
+    <div *ngIf="_data.contacts.length==0" style="text-align: center;">No Contacts Found.</div>
+    <div *ngIf="!(_data.contacts.length==0)">
+        <div class="card" *ngFor="let con of _data.contacts;let idx=index">
+            <div class="card-header" style="text-align: center;background-color: chartreuse;">
+                <b>Contact Name:{{con.Name}}</b>
+            </div>
+            <div class="card-body"><b>Contact Email:</b>{{con.email}}</div>
+            <div class="card-body"><b>Contact Number:</b>{{con.Phn}}</div>
+            <div class="card-body"><b>Contact Type:</b>{{con.contype}}</div>
+            <div class="card-body">
+                <button type="button" class="btn btn-outline-primary" (click)="edit(idx)">Edit</button>
+                <button type="button" class="btn btn-outline-primary" (click)="delete(idx)">Delete</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div *ngIf="_contser.isClicked">
+    <app-contact-form></app-contact-form>
+
+</div>

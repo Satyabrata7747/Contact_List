@@ -1,0 +1,22 @@
+<!-- <div id="outer">
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Hello {{username | uppercase}}</a>
+            <button class="btn btn-outline-success" type="button" routerLink='/Contact'>Show Contacts</button>
+            <button class="btn btn-outline-primary nav-item ml-2" routerLink="/addcontact">Add Contacts</button>
+
+
+
+            <button class="btn btn-outline-primary nav-item ml-2" (click)="logout()">LogOut</button>
+
+        </div>
+    </nav>
+</div> -->
+<nav>
+    <label class="user">Hello {{username| uppercase}}</label>
+    <ul>
+        <li><a routerLink='/addcontact'>Add Contact</a></li>
+        <li><a routerLink='/addcontact'>Logout</a></li>
+
+    </ul>
+</nav>

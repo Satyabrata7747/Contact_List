@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<div class="containers">
+    <div class="cards">
+        <form (ngSubmit)="onsubmit()" #f="ngForm">
+            <h2>Edit Contact</h2>
+            <div id="outer">
+                <div class="form-group">
+                    <input type="text" name="cname" class="form-control" placeholder="Enter the contact Name"
+                        [(ngModel)]="dataser.formvalues.Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Enter the contact Email Address"
+                        ngModel required email [(ngModel)]="dataser.formvalues.email">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phn" class="form-control" placeholder="Enter the contact PhnNumber" required
+                        [(ngModel)]="dataser.formvalues.Phn">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="type" class="form-control" placeholder="Enter the contact type"
+                        [(ngModel)]="dataser.formvalues.contype" required>
+                </div>
+                <button id="sub" type="submit" class="btn btn-primary">Submit</button>
+                <div id="small">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

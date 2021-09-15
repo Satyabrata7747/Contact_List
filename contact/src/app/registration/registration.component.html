@@ -1,0 +1,31 @@
+<div class="containers">
+    <div class="cards">
+        <form (ngSubmit)='onSubmit()' #f="ngForm">
+            <h2>Register</h2>
+            <div id="outer">
+                <div class="form-group">
+                    <input type="text" name="fullName" class="form-control" placeholder="Enter your Full Name" ngModel
+                        required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Enter your Email Address" ngModel
+                        required email>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Enter your Password"
+                        ngModel required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="cpassword" class="form-control" placeholder="Confirm Password" ngModel
+                        required>
+                </div>
+                <button id="sub" type="submit" [disabled]="f.invalid" class="btn btn-primary">Submit</button>
+                <div id="small">
+                    <small class="text-white">Already have an Account?<button id="btn" (click)="log($event)">Log
+                            In</button></small>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
